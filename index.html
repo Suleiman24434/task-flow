@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Daily Planner & Task Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Task<span>Flow</span></h1>
+            <p>Stay organized, boost your daily productivity, and track tasks with local storage persistence.</p>
+        </header>
+
+        <!-- Task App Card -->
+        <div class="card">
+            <!-- Input Form -->
+            <form id="taskForm" class="task-form">
+                <input type="text" id="taskInput" placeholder="What needs to be done today?" required autocomplete="off">
+                <button type="submit" class="btn-add">Add Task</button>
+            </form>
+
+            <!-- Filter Controls -->
+            <div class="filter-buttons">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="active">Active</button>
+                <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Task List Container -->
+            <ul id="taskList" class="task-list">
+                <!-- Dynamically populated via JavaScript -->
+            </ul>
+
+            <!-- App Footer Info / Actions -->
+            <div class="app-footer-stats">
+                <span id="taskCount">0 tasks remaining</span>
+                <button type="button" id="clearCompletedBtn" class="btn-text">Clear Completed</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer style="text-align: center; margin-top: 40px; color: #64748b; font-size: 0.85rem; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+            © 2026 Suleiman Nurain — Built with HTML, CSS, JS
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
